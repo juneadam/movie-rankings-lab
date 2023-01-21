@@ -24,7 +24,8 @@ def create_movie(title, overview, release_date, poster_path):
 def return_all_movies():
 
     return Movie.query.all()
-
+# function that creates ratings by taking in user object, movie object,
+# and integer from score
 def create_rating(user, movie, score):
 
     rating = Rating(user=user, movie=movie, score=score)

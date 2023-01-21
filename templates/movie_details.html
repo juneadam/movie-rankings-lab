@@ -8,6 +8,25 @@
 <p>
   {{ movie.overview }}
 </p>
-
+<h3>Rate the Movie!</h3>
+<form action="/user_rating" method="POST">
+  <input hidden name="movie_id" value="{{ movie.movie_id }}">
+  <p>Please select a rating between 0 and 5</p>
+    <input type="radio" id="0" name="user_rating" value="0">
+    <label for="zero-rating">0</label>
+    <input type="radio" id="1" name="user_rating" value="1">
+    <label for="one-rating">1</label>
+    <input type="radio" id="2" name="user_rating" value="2">
+    <label for="two-rating">2</label>
+    <input type="radio" id="3" name="user_rating" value="3">
+    <label for="three-rating">3</label>
+    <input type="radio" id="4" name="user_rating" value="4">
+    <label for="four-rating">4</label>
+    <input type="radio" id="5" name="user_rating" value="5">
+    <label for="five-rating">5</label>
+  <p>
+    <input type="submit">
+  </p>
+</form>
 <img src="{{ movie.poster_path }}">
 {% endblock %}
